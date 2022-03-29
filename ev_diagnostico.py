@@ -9,21 +9,25 @@ def main():
     tweets = []
     
 
-    count = 0
+    # count = 0
 
     for line in open('farmers-protest-tweets-2021-03-5.json', 'r'):
         new_tweet = json.loads(line)
         tweets.append(new_tweet)
-        count += 1
-        if count == 100:
-            break
+        # count += 1
+        # if count == 10000:
+        #     break
 
 
 
-    print(len(tweets))
+    #print(len(tweets))
+    print("Tweet id of top 10 most retweeted tweets:")
     print(top_10_most_retweeted_tweets(tweets))
+    print("Top 10 most active users (most tweets):")
     print(top_10_most_acticve_users(tweets))
+    print("Top 10 most active days (most tweets):")
     print(top_10_most_acticve_days(tweets))
+    print("Top 10 most hashtags used (most tweets):")
     print(top_10_most_hashgtags(tweets))
     return 
 
